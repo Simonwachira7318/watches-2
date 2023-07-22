@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="shortcut icon" href="./images/logos/kings.png" type="image/x-icon">
+    <script src="./app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <header>
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="collection.html">Collections</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="#" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>We would love to hear from you. Get in touch with us using the following contact information:</p>
+
+            <div class="info-row">
+                <div class="icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="info">
+                    <h3>Phone</h3>
+                    <p>+254 115256304</p>
+                </div>
+            </div>
+
+            <div class="info-row">
+                <div class="icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info">
+                    <h3>Email</h3>
+                    <p>info@Wachiracrownwatches.com</p>
+                </div>
+            </div>
+
+            <div class="info-row">
+                <div class="icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="info">
+                    <h3>Address</h3>
+                    <p>123 Main Street, Kutus, Kenya</p>
+                </div>
+            </div>
+
+            <div class="info-row">
+                <div class="icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="info">
+                    <h3>WORKING HOURS</h3>
+                    <p>Monday - Friday: 8:30 AM - 5:00 PM</p>
+                    <p>Saturday: 10:00 AM - 3:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+
+            <div class="social-media">
+                <h3>Connect with Us</h3>
+                <ul>
+                    <li><a ><i class="fab fa-facebook-f" onclick="redirectToFacebook()"></i></a></li>
+                    <li><a ><i class="fab fa-twitter" onclick="redirectToTwitter()"></i></a></li>
+                    <li><a ><i class="fab fa-instagram"onclick="redirectToInstagram()"></i></a></li>
+                    <li><a ><i class="fab fa-linkedin-in"onclick="redirectToLinkedin()"></i></a></li>
+                    <li><a ><i class="fab fa-pinterest"onclick="redirectToInstagram()"></i></a></li>
+                    <li><a ><i class="fab fa-quora"onclick="redirectToInstagram()"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send us a Message</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>   
+      <div class="container2">
+         <!-- // importing link  -->
+         <div class="containerf" id="footerContainer">
+            
+            <!-- // importing link  -->
+            <div class="containerf" id="footerContainer"></div>
+
+            <script>
+            // Fetch the content of footer.html
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                // Inject the fetched content into the container div
+                document.getElementById('footerContainer').innerHTML = data;
+                })
+                .catch(error => console.error(error));
+            </script>
+         </div>
+
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <style>
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            scroll-behavior: smooth;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #000000;
+            padding: 20px;
+            border-bottom: 1px solid white;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        nav ul li a.active,
+        nav ul li a:hover {
+            color: #ff0000;
+        }
+
+        /* Contact Section Styles */
+        .contact-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 50px 0;
+        }
+
+        .contact-info,
+        .contact-form {
+            flex-basis: 50%;
+            padding: 20px;
+            color: #efe3e3;
+        }
+
+        .contact-info h2,
+        .contact-form h2 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ff0000;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .info-row .icon {
+            margin-right: 10px;
+            font-size: 24px;
+            color: #ff0000;
+        }
+
+        .social-media ul {
+            list-style-type: none;
+            display: flex;
+            /* color: #ff0000; */
+        }
+
+        .social-media ul li {
+            margin-right: 10px;
+        }
+
+        .social-media ul li a {
+            text-decoration: none;
+            color: #e3d9d9;
+            font-size: 24px;
+        }
+
+        .social-media ul li a:hover {
+            color: #ff0000;
+        }
+
+        .contact-form form {
+            display: grid;
+            grid-gap: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cf1c1c;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .contact-form textarea {
+            height: 120px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #da2e2e;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #ff0000;
+        }
+
+        /* Footer Styles */
+        /* footer {
+            background-color: #000000;
+            color: #ff0000;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #ff0000;
+        }
+
+        footer a:hover {
+            color: #f1f1f1;
+        } */
+    </style>
+</body>
+</html>
